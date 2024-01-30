@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "20240130_public_holiday.parquet",
-				"folderPath": "raw",
+				"folderPath": "raw/public_holiday.parquet",
 				"container": "publicholidays"
 			},
 			"compressionCodec": "snappy"
