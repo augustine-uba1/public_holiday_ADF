@@ -1,0 +1,9 @@
+{
+	"name": "public-holiday",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "db68797a-663c-4660-ae3f-4f46b79861d9",
+		"tenantId": "19e6cd8e-58ff-4aaa-a13f-e176857d78b2"
+	}
+}
