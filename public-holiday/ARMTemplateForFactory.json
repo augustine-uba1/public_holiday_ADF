@@ -173,8 +173,8 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/publicholidays/blobs/public_holiday.parquet",
-					"blobPathEndsWith": "public_holiday.parquet",
+					"blobPathBeginsWith": "/publicholidays/blobs/public_holiday/",
+					"blobPathEndsWith": ".parquet",
 					"ignoreEmptyBlobs": false,
 					"scope": "[parameters('real_time_trigger_properties_typeProperties_scope')]",
 					"events": [
