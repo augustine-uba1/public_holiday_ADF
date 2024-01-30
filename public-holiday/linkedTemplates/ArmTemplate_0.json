@@ -233,11 +233,10 @@
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
 					"blobPathBeginsWith": "/publicholidays/blobs/",
-					"ignoreEmptyBlobs": false,
+					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('real_time_trigger_properties_typeProperties_scope')]",
 					"events": [
-						"Microsoft.Storage.BlobCreated",
-						"Microsoft.Storage.BlobDeleted"
+						"Microsoft.Storage.BlobCreated"
 					]
 				}
 			},
