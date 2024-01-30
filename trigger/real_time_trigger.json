@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "triggers when a blob is added to the storage account container",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
