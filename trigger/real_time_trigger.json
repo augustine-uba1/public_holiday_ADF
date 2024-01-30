@@ -1,0 +1,18 @@
+{
+	"name": "real_time_trigger",
+	"properties": {
+		"description": "triggers when a blob is added to the storage account container",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/publicholidays/blobs/raw/public_holiday.parquet",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/ec769a23-6a4e-49a1-a74c-2967d09a7742/resourceGroups/ADF_Tutorial/providers/Microsoft.Storage/storageAccounts/blobstorageaccountuba",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
