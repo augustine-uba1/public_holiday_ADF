@@ -19,12 +19,21 @@
 						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					},
-					"name": "DeltaLakeLocation"
+					"name": "sink1"
 				}
 			],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          countryOrRegion as string,",
+				"          holidayName as string,",
+				"          normalizeHolidayName as string,",
+				"          isPaidTimeOff as boolean,",
+				"          countryRegionCode as string,",
+				"          date as timestamp,",
+				"          ingestion_date as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     inferDriftedColumnTypes: true,",
 				"     limit: 100,",
@@ -34,11 +43,11 @@
 				"     validateSchema: false,",
 				"     format: 'parquet',",
 				"     truncate: true,",
-				"     umask: 0733,",
+				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> DeltaLakeLocation"
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
