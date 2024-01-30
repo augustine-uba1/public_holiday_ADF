@@ -1,0 +1,37 @@
+{
+	"name": "CopyFromRaw",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "opendataset_microsoft_parquet",
+						"type": "DatasetReference"
+					},
+					"name": "SourceData",
+					"description": "Microsoft Open datasets"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          countryOrRegion as string,",
+				"          holidayName as string,",
+				"          normalizeHolidayName as string,",
+				"          isPaidTimeOff as boolean,",
+				"          countryRegionCode as string,",
+				"          date as timestamp,",
+				"          ingestion_date as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     inferDriftedColumnTypes: true,",
+				"     limit: 100,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> SourceData"
+			]
+		}
+	}
+}
