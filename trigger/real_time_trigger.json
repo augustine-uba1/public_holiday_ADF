@@ -14,7 +14,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/publicholidays/blobs/public_holiday/",
+			"blobPathBeginsWith": "/publicholidays/blobs/",
 			"blobPathEndsWith": ".parquet",
 			"ignoreEmptyBlobs": false,
 			"scope": "/subscriptions/ec769a23-6a4e-49a1-a74c-2967d09a7742/resourceGroups/ADF_Tutorial/providers/Microsoft.Storage/storageAccounts/blobstorageaccountuba",
