@@ -14,11 +14,12 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/publicholidays/blobs/raw/",
-			"ignoreEmptyBlobs": true,
+			"blobPathBeginsWith": "/publicholidays/blobs/",
+			"ignoreEmptyBlobs": false,
 			"scope": "/subscriptions/ec769a23-6a4e-49a1-a74c-2967d09a7742/resourceGroups/ADF_Tutorial/providers/Microsoft.Storage/storageAccounts/blobstorageaccountuba",
 			"events": [
-				"Microsoft.Storage.BlobCreated"
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
 			]
 		}
 	}
